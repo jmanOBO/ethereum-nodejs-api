@@ -3,6 +3,15 @@
   You will also learn a great deal from the authentication implementations.
  Enjoy. 
 
+# Features of this API
+
+ * Robust, secured authentication mechanism. 
+ * Password hashing technique with bcrypt.
+ * Applying the MVC(Model View Controller) design technique to the express framework with view excluded since we are working with json data and not .htmls. 
+ * Implementing web3, creation of wallet addresses with private keys 
+ * MongoDb Ingration with express js
+ * Adhering to REST API guidelines
+ * Adhering to the DRY (Dont repeat yourself) principle by creating helper files for common operations.
 # Environmental Variables needed to start using the api asap
   You have to create a .env file in the root directory wih these environmental variables,these are the ones I used in creating the api, you can replace with yours:
 
@@ -31,7 +40,7 @@
    
    Get /wallets (get all wallets)
    Get /wallets/{walletId} (Get a particular wallet with it's walletid)
-   
+
    # Demo (Hosted on Herorku)
    Base url: https://ethereum-wallet-api.herokuapp.com/api/v1
 
