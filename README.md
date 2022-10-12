@@ -60,9 +60,9 @@
     }
    to https://ethereum-wallet-api.herokuapp.com/api/v1/sign-in
 
-   You will receive an object containing an access token which is necessary to make further requests to other endpoints of the api. The access token expires after 130secs. And a refresh token is also issued but in an httpOnly token at this point. The refresh token expires after 1day.
+   You will receive an object containing an access token which is necessary to make further requests to other endpoints of the api. The access token expires after 130secs. And a refresh token is also issued but in an httpOnly cookie at this point. The refresh token expires after 1day.
    
-   Within 24hrs after issue, the refresh token can be used to generate new access tokens with the enpoint below, you do not need to handle this in the body of requests as it is automatically sent along as long as you are logged in:
+   Within 24hrs after issue, the refresh token can be used to generate new access tokens with the enpoint below, you do not need to handle this in the body of requests as it is automatically sent  along as a cookie as long as you are logged in:
 
    https://ethereum-wallet-api.herokuapp.com/api/v1/access-token.
 
