@@ -36,7 +36,7 @@
    Get /users/{userId} (Get a particular user with a userid)
    Post /sign-in (authenticate a user with an email and password)
    Post /log-out (logs a user out)
-   Post /access-token (generates a new accesstoken using a refreshtken).
+   Get /refresh-token (generates a new accesstoken using a refreshtken).
    
    Get /wallets (get all wallets)
    Get /wallets/{walletId} (Get a particular wallet with it's walletid)
