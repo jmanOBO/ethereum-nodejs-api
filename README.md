@@ -1,5 +1,5 @@
 # Ethereum Wallet API (With a hosted Working Demo on Heroku)
- this is an api you can implement (or even expand on) to build a web3 application. I built this api with a mvc structure inmind to make the codes cleaner. I intentionally created the file structure to include models, controllers, helpers and middleware directories to make it more interesting.
+ This is an api made with NODE V16 . You can implement (or even expand on) to build a web3 application. I built this api with a mvc structure inmind to make the codes cleaner. I intentionally created the file structure to include models, controllers, helpers and middleware directories to make it more interesting.
   You will also learn a great deal from the authentication implementations.
  Enjoy. 
 

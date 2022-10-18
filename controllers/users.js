@@ -38,7 +38,7 @@ const registerUser=async(req,res)=>{
      email,
      password,
   }=req.body;
-
+  if(!email || !password) return res.status(401).json({message: "Email or/and password cannot be empty.",error:true});
   const findEmail=await models.User.findOne({email});
   if(findEmail) return  res.status(409).json({message: "The email is already found in our database.",error:true});
 
@@ -83,7 +83,7 @@ const loginUser=async(req,res)=>{
     const refreshToken=await createRefreshToken(user._id);
     await models.User.findOneAndUpdate({email},{refreshToken});
     
-    res.cookie("jwt",refreshToken,{maxAge: 24*60*60*1000,httpOnly:true});
+    res.cookie("jwt",refreshToken,{maxAge: 24*60*60*1000*2, sameSite: "None", secure:true,httpOnly:true});
     res.status(200).json({message:"Login successful",error:null,accessToken});
     
     
@@ -94,7 +94,7 @@ const logOutUser=async(req,res)=>{
     const cookies=req.cookies;
     if(!cookies.jwt) return res.json({message:"You are already logged out", error:null});
     await models.User.updateOne({refreshToken:cookies.jwt},{$set:{refreshToken:""}});
-    res.clearCookie("jwt",{maxAge: 24*60*60*1000,httpOnly:true});
+    res.clearCookie("jwt",{maxAge: 24*60*60*1000*2, sameSite: "None", secure:true,httpOnly:true});
     res.json({message:"Log out successful", error:null});
    
    }
