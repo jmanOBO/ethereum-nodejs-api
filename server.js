@@ -8,7 +8,7 @@ const dbConnect=require("./models/dbConnect");
 const PORT=process.env.PORT;
 const mongodb_conn_string=process.env.MONGODB_CONNECT_STRING;
 const app=express();
-const whitelist=["http://localhost:3000","https://localhost:4000","https://google.com"];
+const whitelist=["http://localhost:3000","https://localhost:4000","https://google.com","https://deft-praline-51a72b.netlify.app"];
 const corsOptions={
     origin: (origin, callback)=>{
               if(whitelist.indexOf(origin!==-1)){

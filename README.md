@@ -85,8 +85,12 @@
    Get a particular(any) wallet's details by sending a get request to the endpoint below. Again send along a bearer token.
    
    https://ethereum-wallet-api.herokuapp.com/api/v1/wallets/{walletId}   (userId being a parameter).
+  
 
-
+  # React-Front End That Implements This API
+  
+  Login:  https://deft-praline-51a72b.netlify.app/login 
+  Register: https://deft-praline-51a72b.netlify.app/register
 
    # Contact me
 
