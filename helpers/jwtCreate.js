@@ -7,7 +7,7 @@ const createAccessToken=async(id)=>{
   const token=await jwt.sign({
     userid:id,
   },ACCESS_TOKEN_PASSWORD,{
-    expiresIn: "130s",
+    expiresIn: "10s",
   });
   return token;
 }

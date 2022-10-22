@@ -27,7 +27,7 @@ router.route("/sign-in")
 
 router.route("/log-out")
         .post(logOutUser);       
-        router.route("/refresh-token")
+router.route("/refresh-token")
         .get(getNewAccessToken);
 
 module.exports=router;

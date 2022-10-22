@@ -92,7 +92,7 @@ const loginUser=async(req,res)=>{
 
 const logOutUser=async(req,res)=>{
     const cookies=req.cookies;
-    if(!cookies.jwt) return res.json({message:"You are already logged out", error:null});
+    if(!cookies.jwt) return res.status(204).json({message:"You are already logged out", error:null});
     await models.User.updateOne({refreshToken:cookies.jwt},{$set:{refreshToken:""}});
     res.clearCookie("jwt",{maxAge: 24*60*60*1000*2, sameSite: "None", secure:true,httpOnly:true});
     res.json({message:"Log out successful", error:null});
