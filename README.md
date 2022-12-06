@@ -41,56 +41,7 @@
    Get /wallets (get all wallets)
    Get /wallets/{walletId} (Get a particular wallet with it's walletid)
 
-   # Demo (Hosted on Herorku)
-   Base url: https://ethereum-wallet-api.herokuapp.com/api/v1
 
-   First create an account by posting json object  like below:
-    
-    {
-      "email":"example@example.com,
-      "password":"password"
-    }
-
-   to https://ethereum-wallet-api.herokuapp.com/api/v1/users.
-
-   And then login by posting json object like below:
-   {
-      "email":"example@example.com,
-      "password":"password"
-    }
-   to https://ethereum-wallet-api.herokuapp.com/api/v1/sign-in
-
-   You will receive an object containing an access token which is necessary to make further requests to other endpoints of the api. The access token expires after 10secs. And a refresh token is also issued but in an httpOnly cookie at this point. The refresh token expires after 1day.
-   
-   Within 24hrs after issue, the refresh token can be used to generate new access tokens with the enpoint below, you do not need to handle this in the body of requests as it is automatically sent  along as a cookie as long as you are logged in: Send a get request to:
-
-   https://ethereum-wallet-api.herokuapp.com/api/v1/refresh-token.
-
-   Send a get request to the endpoint below to fetch all users. Make sure to send along a bearer header containing the access token:
-
-   https://ethereum-wallet-api.herokuapp.com/api/v1/users .
-
-   Also get the current signed in user's (you) details, all of them by sending a get request to the endpoint below. Also include the bearer token.
-
-   https://ethereum-wallet-api.herokuapp.com/api/v1/user .
-
-   Get a particular (any) user's details by sending a get request to the endpoint below. Again send along a bearer token.
-   
-   https://ethereum-wallet-api.herokuapp.com/api/v1/users/{userId}   (userId being a parameter) .
-  
-   Send a get request to the endpoint below to fetch all wallets (a wallet is created on every sign ups so create more than one accounts to get more than one wallets(eth addresses and private keys)). Make sure to send along a bearer header containing the access token:
-
-   https://ethereum-wallet-api.herokuapp.com/api/v1/wallets .
-
-   Get a particular(any) wallet's details by sending a get request to the endpoint below. Again send along a bearer token.
-   
-   https://ethereum-wallet-api.herokuapp.com/api/v1/wallets/{walletId}   (userId being a parameter).
-  
-
-  # React-Front End That Implements This API
-  
-  Login:  https://deft-praline-51a72b.netlify.app/login 
-  Register: https://deft-praline-51a72b.netlify.app/register
 
    # Contact me
 
