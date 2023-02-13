@@ -45,6 +45,6 @@
 
    # Contact me
 
-      Email: okonkwoify@algosonwebtechnologies.com
+      Email: okonkwo.ify18@gmail.com
 
         
